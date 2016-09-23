@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="EventsShowTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-lu-EnJ">
+                        <rect key="frame" x="8" y="8" width="63" height="63"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="1GE-lu-EnJ" secondAttribute="height" multiplier="1:1" id="cw0-6L-uQz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm7-ft-NlR">
+                        <rect key="frame" x="79" y="8" width="98" height="23"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="remindTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFr-46-1Ta">
+                        <rect key="frame" x="79" y="51" width="288" height="20"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1GE-lu-EnJ" secondAttribute="bottom" constant="8" id="4y9-hk-uAb"/>
+                    <constraint firstItem="Qm7-ft-NlR" firstAttribute="leading" secondItem="1GE-lu-EnJ" secondAttribute="trailing" constant="8" id="5o0-Uw-eJF"/>
+                    <constraint firstItem="1GE-lu-EnJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="L0P-ua-FvV"/>
+                    <constraint firstItem="oFr-46-1Ta" firstAttribute="leading" secondItem="1GE-lu-EnJ" secondAttribute="trailing" constant="8" id="L2s-4Y-oUW"/>
+                    <constraint firstItem="oFr-46-1Ta" firstAttribute="bottom" secondItem="1GE-lu-EnJ" secondAttribute="bottom" id="LSS-WF-mhE"/>
+                    <constraint firstItem="oFr-46-1Ta" firstAttribute="leading" secondItem="Qm7-ft-NlR" secondAttribute="leading" id="P1v-9e-ilE"/>
+                    <constraint firstItem="1GE-lu-EnJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="P3s-ll-OF6"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Qm7-ft-NlR" secondAttribute="trailing" id="dpr-Zo-2mf"/>
+                    <constraint firstItem="Qm7-ft-NlR" firstAttribute="top" secondItem="1GE-lu-EnJ" secondAttribute="top" id="hlx-cX-Npz"/>
+                    <constraint firstAttribute="trailing" secondItem="oFr-46-1Ta" secondAttribute="trailing" constant="8" id="uPL-2A-iY5"/>
+                    <constraint firstItem="Qm7-ft-NlR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zfc-w2-Nco"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="L2s-4Y-oUW"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="eventNameLab" destination="Qm7-ft-NlR" id="Z0D-gs-A8i"/>
+                <outlet property="iconImage" destination="1GE-lu-EnJ" id="y1i-MW-ASM"/>
+                <outlet property="remindTimeLab" destination="oFr-46-1Ta" id="Zc5-ti-1AT"/>
+            </connections>
+            <point key="canvasLocation" x="168" y="271.5"/>
+        </tableViewCell>
+    </objects>
+</document>

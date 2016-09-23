@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDescriptionsViewController">
+            <connections>
+                <outlet property="eventNameText" destination="1vr-oF-WAe" id="lCs-hw-RhI"/>
+                <outlet property="iconImg" destination="ZpZ-qi-YKJ" id="kZo-cn-J5j"/>
+                <outlet property="iconNameLab" destination="73C-tr-B8D" id="nEn-WW-edV"/>
+                <outlet property="noteText" destination="q4g-AH-we5" id="Pyk-Xo-2Py"/>
+                <outlet property="remindTimeBtn" destination="5sb-N7-QeG" id="0eD-sA-zFb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZpZ-qi-YKJ">
+                    <rect key="frame" x="20" y="84" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZpZ-qi-YKJ" secondAttribute="height" multiplier="1:1" id="WPd-g1-oY8"/>
+                        <constraint firstAttribute="height" constant="40" id="ga2-qR-THw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73C-tr-B8D">
+                    <rect key="frame" x="20" y="132" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="sOF-6b-Op9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入事件名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vr-oF-WAe">
+                    <rect key="frame" x="8" y="192" width="359" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6ZN-kF-76P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sb-N7-QeG">
+                    <rect key="frame" x="20" y="380" width="335" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fCd-qp-BYY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="选择事件发生的时间"/>
+                    <connections>
+                        <action selector="reminaTimeBtn:" destination="-1" eventType="touchUpInside" id="byZ-1j-Dzr"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="备注" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4g-AH-we5">
+                    <rect key="frame" x="8" y="286" width="359" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="i2V-Vj-cqX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZpZ-qi-YKJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1bE-gO-MTu"/>
+                <constraint firstItem="73C-tr-B8D" firstAttribute="leading" secondItem="ZpZ-qi-YKJ" secondAttribute="leading" id="3lc-QQ-gMd"/>
+                <constraint firstAttribute="trailing" secondItem="5sb-N7-QeG" secondAttribute="trailing" constant="20" id="93y-xF-EAW"/>
+                <constraint firstItem="5sb-N7-QeG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="AEz-Eb-WSX"/>
+                <constraint firstItem="q4g-AH-we5" firstAttribute="leading" secondItem="1vr-oF-WAe" secondAttribute="leading" id="AeC-ZV-x2Z"/>
+                <constraint firstItem="1vr-oF-WAe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="KRd-WS-9Oy"/>
+                <constraint firstItem="5sb-N7-QeG" firstAttribute="top" secondItem="q4g-AH-we5" secondAttribute="bottom" constant="50" id="LpR-UQ-szD"/>
+                <constraint firstItem="q4g-AH-we5" firstAttribute="top" secondItem="1vr-oF-WAe" secondAttribute="bottom" constant="50" id="QmE-5p-46y"/>
+                <constraint firstItem="ZpZ-qi-YKJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="XvO-DO-MFy"/>
+                <constraint firstItem="1vr-oF-WAe" firstAttribute="top" secondItem="73C-tr-B8D" secondAttribute="bottom" constant="40" id="YVk-BD-pSx"/>
+                <constraint firstItem="q4g-AH-we5" firstAttribute="trailing" secondItem="1vr-oF-WAe" secondAttribute="trailing" id="YZj-HF-5vx"/>
+                <constraint firstItem="73C-tr-B8D" firstAttribute="top" secondItem="ZpZ-qi-YKJ" secondAttribute="bottom" constant="8" id="lK0-2d-slu"/>
+                <constraint firstItem="73C-tr-B8D" firstAttribute="trailing" secondItem="ZpZ-qi-YKJ" secondAttribute="trailing" id="rwV-7b-jSc"/>
+                <constraint firstAttribute="trailing" secondItem="1vr-oF-WAe" secondAttribute="trailing" constant="8" id="u9t-3i-sTb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="302.5" y="326.5"/>
+        </view>
+    </objects>
+</document>
